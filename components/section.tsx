@@ -17,6 +17,7 @@ export default function Section({ children, delay = 0 }: Props) {
     <StyledDiv
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
+      // @ts-ignore no problem in operation, although
       transition={{ duration: 0.8, delay }}
       mb={6}
     >
