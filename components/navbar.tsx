@@ -1,4 +1,6 @@
 import NextLink from 'next/link'
+
+import Logo from 'components/logo'
 import {
   Container,
   Box,
@@ -65,12 +67,12 @@ export default function Navbar({ path, ...props }: Props) {
         p={2}
         maxW="container.md"
         flexWrap="wrap"
-        alignContent="center"
+        textAlign="center"
         justifyContent="space-between"
       >
         <Flex align="center" mr={5}>
           <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            {/* <Logo /> */}
+            <Logo />
           </Heading>
         </Flex>
 
@@ -90,7 +92,7 @@ export default function Navbar({ path, ...props }: Props) {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage"
+            href="https://github.com/empelt/tetsuya-homepage"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -102,7 +104,7 @@ export default function Navbar({ path, ...props }: Props) {
           </LinkItem>
         </Stack>
 
-        <Box flex={1} alignContent="right">
+        <Box flex={1} textAlign="right">
           <SwitchThemeButton />
 
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -125,7 +127,7 @@ export default function Navbar({ path, ...props }: Props) {
                 </NextLink>
                 <MenuItem
                   as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
+                  href="https://github.com/empelt/tetsuya-homepage"
                 >
                   View Source
                 </MenuItem>
