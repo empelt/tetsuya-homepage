@@ -14,7 +14,8 @@ import Paragraph from 'components/paragraph'
 import { BioSection, BioYear } from 'components/bio'
 import Layout from 'components/layouts/article'
 import Section from 'components/section'
-import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub } from 'react-icons/io5'
+import { SiQiita } from 'react-icons/si'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -67,7 +68,6 @@ export default function Home() {
             Bio
           </Heading>
           <Paragraph>早稲田大学基幹理工学部在籍</Paragraph>
-          <Paragraph>自己紹介を書く</Paragraph>
           <Paragraph>
             高校3年生の冬からテックフォワード株式会社でフロントエンド，バックエンドエンジニアとして，「Deiba」や「ミキワメ」など様々なサービスの開発に携わる。
           </Paragraph>
@@ -139,13 +139,13 @@ export default function Home() {
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://twitter.com/tetsuya_000" target="_blank">
+              <Link href="https://qiita.com/empelt" target="_blank">
                 <Button
                   variant="ghost"
                   colorScheme="teal"
-                  leftIcon={<IoLogoTwitter />}
+                  leftIcon={<SiQiita />}
                 >
-                  @tetsuya_000
+                  @empelt
                 </Button>
               </Link>
             </ListItem>
