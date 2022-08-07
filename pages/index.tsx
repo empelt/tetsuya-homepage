@@ -31,7 +31,7 @@ export default function Home() {
             <Heading as="h2" variant="page-title">
               加藤徹哉(Tetsuya Kato)
             </Heading>
-            <p>Web Developer + CTO @ phatechs Inc.</p>
+            <p>Fullstack Developer + CTO @ phatechs Inc.</p>
             <NextLink href="https://www.waseda.jp/top/" passHref>
               <Link target="_blank">Waseda University</Link>
             </NextLink>
@@ -68,6 +68,7 @@ export default function Home() {
             Bio
           </Heading>
           <Paragraph>早稲田大学基幹理工学部在籍</Paragraph>
+          <br />
           <Paragraph>
             高校3年生の冬からテックフォワード株式会社でフロントエンド，バックエンドエンジニアとして，「Deiba」や「ミキワメ」など様々なサービスの開発に携わる。
           </Paragraph>
