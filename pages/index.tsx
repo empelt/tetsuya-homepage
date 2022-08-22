@@ -112,7 +112,7 @@ export default function Home() {
           </BioSection>
           <BioSection>
             <BioYear>May 2022 to Present</BioYear>
-            Phatechs株式会社
+            PhatecHs株式会社
           </BioSection>
         </Section>
 
@@ -151,14 +151,6 @@ export default function Home() {
               </Link>
             </ListItem>
           </List>
-
-          <Box textAlign="center" my={4}>
-            <NextLink href="/posts" passHref scroll={false}>
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
-                Popular posts
-              </Button>
-            </NextLink>
-          </Box>
         </Section>
       </Container>
     </Layout>

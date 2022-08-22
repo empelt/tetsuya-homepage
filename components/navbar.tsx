@@ -87,8 +87,8 @@ export default function Navbar({ path, ...props }: Props) {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
+          <LinkItem href="/contact" path={path}>
+            Contact
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -122,8 +122,8 @@ export default function Navbar({ path, ...props }: Props) {
                 <NextLink href="/works" passHref>
                   <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
-                <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                <NextLink href="/contact" passHref>
+                  <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
                 <MenuItem
                   as={Link}
