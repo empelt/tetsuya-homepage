@@ -7,11 +7,12 @@ import {
   Button,
   List,
   ListItem,
-  chakra
+  chakra,
+  Text,
+  useColorModeValue
 } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from 'components/paragraph'
-import { BioSection, BioYear } from 'components/bio'
+import { ExpSection, ExpTitle, ExpText, ExpCard } from 'components/experience'
 import Layout from 'components/layouts/article'
 import Section from 'components/section'
 import { IoLogoGithub, IoMailOutline } from 'react-icons/io5'
@@ -23,6 +24,7 @@ const ProfileImage = chakra(Image, {
 })
 
 export default function Home() {
+  const bg = useColorModeValue('#F4FBFE', '#343a40')
   return (
     <Layout>
       <Container maxW="container.sm">
@@ -67,60 +69,67 @@ export default function Home() {
           <Heading as="h3" variant="section-title">
             Bio
           </Heading>
-          <Paragraph>早稲田大学基幹理工学部在籍</Paragraph>
-          <br />
           <Paragraph>
-            高校3年生の冬からテックフォワード株式会社でフロントエンド，バックエンドエンジニアとして，「Deiba」や「ミキワメ」など様々なサービスの開発に携わる。
-          </Paragraph>
-          <Paragraph>
-            大学2年の夏から株式会社Lightblue
-            TechnologyでAIエンジニアとして，セグメンテーションモデルの精度調査や，Sagemakerを用いたAI開発基盤の設計などを担当
-          </Paragraph>
-          <Paragraph>
-            大学2年の冬からSuishow株式会社
-            でフロントエンドエンジニアとして，自社サービスの「
+            早稲田大学基幹理工学部情報通信学科在籍。高校2年生のときに競技プログラミング「AtCoder」にハマりバソコン甲子園などに出場する。高校の卒論は「プログラミング教育における競技プログラミングの活用」というテーマで執筆。高校3年生の冬からテックフォワード株式会社でフロントエンド，バックエンドエンジニアとして，「Deiba」や「ミキワメ」など様々なサービスの開発に携わる。大学2年の夏から株式会社Lightblue
+            TechnologyでAIエンジニアとして，セグメンテーションモデルの精度調査や,Sagemakerを用いたAI開発基盤の設計などを担当。大学2年の冬からSuishow株式会社でフロントエンドエンジニアとして，自社サービスの「
             <NextLink href="https://app.metamart.space/ja" passHref>
               <Link target="_blank">MetaMart</Link>
             </NextLink>
-            」の開発を担当。
+            」の開発を担当。大学3年の春にPhatecHs株式会社を共同創業し，CTOに就任。自社サービスとしてスマホアプリの開発を行う。
           </Paragraph>
-          <Paragraph>大学3年の春からCTO就任</Paragraph>
-          <Box textAlign="center" my={4}>
-            <NextLink href="/works" passHref scroll={false}>
-              <Button rightIcon={<ChevronRightIcon />} colorScheme="blue">
-                My portfolio
-              </Button>
-            </NextLink>
-          </Box>
         </Section>
 
         <Section delay={0.2}>
           <Heading as="h3" variant="section-title">
             Experience
           </Heading>
-          <BioSection>
-            <BioYear>Jan 2020 to Present</BioYear>
-            Techforward株式会社
-            <br />
-            ・フロントエンドからバックエンドまで幅広く開発を担当
-          </BioSection>
-          <BioSection>
-            <BioYear>Oct 2021 to Present</BioYear>
-            株式会社Lightblue Technology
-          </BioSection>
-          <BioSection>
-            <BioYear>Dec 2021 to Present</BioYear>
-            Suishow株式会社
-          </BioSection>
-          <BioSection>
-            <BioYear>May 2022 to Present</BioYear>
-            PhatecHs株式会社
-          </BioSection>
+          <ExpSection>
+            <ExpCard bg={bg} boxShadow="md">
+              <ExpTitle>Techforward株式会社</ExpTitle>
+              <Text>Jan 2020 to Present</Text>
+              <ExpText>
+                ・「Deiba」，「ミキワメ」などの大規模サービスのフロントエンド，バックエンド開発
+              </ExpText>
+              <ExpText>
+                ・受託開発でスピード感のある新規サービス開発の経験を積む
+              </ExpText>
+            </ExpCard>
+          </ExpSection>
+          <ExpSection>
+            <ExpCard bg={bg} boxShadow="md">
+              <ExpTitle>株式会社Lightblue Technology</ExpTitle>
+              <Text>Oct 2021 to Present</Text>
+              <ExpText>・セグメンテーションモデルの精度調査</ExpText>
+              <ExpText>・Sagemakerを用いたAI開発基盤の設計</ExpText>
+              <ExpText>・BERTによる文書分類モデルの開発</ExpText>
+            </ExpCard>
+          </ExpSection>
+          <ExpSection>
+            <ExpCard bg={bg} boxShadow="md">
+              <ExpTitle>Suishow株式会社</ExpTitle>
+              <Text>Dec 2021 to Present</Text>
+              <ExpText>
+                ・自社サービス「MetaMart」のフロントエンドの開発
+              </ExpText>
+              <ExpText>
+                ・チーム開発の経験を積む
+              </ExpText>
+            </ExpCard>
+          </ExpSection>
+          <ExpSection>
+            <ExpCard bg={bg} boxShadow="md">
+              <ExpTitle>PhatecHs株式会社</ExpTitle>
+              <Text>May 2022 to Present</Text>
+              <ExpText>
+                ・自社サービスのスマホアプリ開発
+              </ExpText>
+            </ExpCard>
+          </ExpSection>
         </Section>
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            I ♥
+            Hobby
           </Heading>
           <Paragraph>Music, Playing the Guitar, Soccer, Cooking</Paragraph>
         </Section>

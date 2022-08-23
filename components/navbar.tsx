@@ -19,7 +19,6 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import SwitchThemeButton from './switch-theme-button'
-import { IoLogoGithub } from 'react-icons/io5'
 import React, { ReactNode } from 'react'
 
 type LinkItemProps = {
@@ -90,18 +89,6 @@ export default function Navbar({ path, ...props }: Props) {
           <LinkItem href="/contact" path={path}>
             Contact
           </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/empelt/tetsuya-homepage"
-            path={path}
-            display="inline-flex"
-            alignItems="center"
-            style={{ gap: 4 }}
-            pl={2}
-          >
-            <IoLogoGithub />
-            Source
-          </LinkItem>
         </Stack>
 
         <Box flex={1} textAlign="right">
@@ -125,12 +112,6 @@ export default function Navbar({ path, ...props }: Props) {
                 <NextLink href="/contact" passHref>
                   <MenuItem as={Link}>Contact</MenuItem>
                 </NextLink>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/empelt/tetsuya-homepage"
-                >
-                  View Source
-                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
