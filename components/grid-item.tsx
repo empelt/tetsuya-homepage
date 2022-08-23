@@ -1,5 +1,5 @@
-import NextLink from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link'
+import Image, { StaticImageData } from 'next/image'
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
 import React, { ReactNode } from 'react'
@@ -32,19 +32,22 @@ export function GridItem({ children, href, title, thumbnail }: GridItemProps) {
 
 type WorkGridItemProps = {
   children: ReactNode
-  id: string
   title: string
-  thumbnail: string
+  thumbnail: string | StaticImageData
+  url: string
 }
 export function WorkGridItem({
   children,
-  id,
   title,
-  thumbnail
+  thumbnail,
+  url
 }: WorkGridItemProps) {
   return (
     <Box w="100%" textAlign="center">
-      <NextLink href={`/works/${id}`} passHref scroll={false}>
+      <Link
+        href={url}
+        target="_blank"
+      >
         <LinkBox cursor="pointer">
           <Image
             src={thumbnail}
@@ -52,14 +55,12 @@ export function WorkGridItem({
             className="grid-item-thumbnail"
             placeholder="blur"
           />
-          <LinkOverlay href={`/works/${id}`}>
-            <Text mt={2} fontSize={20}>
-              {title}
-            </Text>
-          </LinkOverlay>
+          <Text mt={2} fontSize={20}>
+            {title}
+          </Text>
           <Text fontSize={14}>{children}</Text>
         </LinkBox>
-      </NextLink>
+      </Link>
     </Box>
   )
 }
@@ -70,6 +71,7 @@ export function GridItemStyle() {
       styles={`
       .grid-item-thumbnail {
         border-radius: 12px;
+        border: 2px solid#EEEEEE!important
       }
     `}
     />
