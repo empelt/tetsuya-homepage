@@ -14,7 +14,7 @@ import Paragraph from 'components/paragraph'
 import { BioSection, BioYear } from 'components/bio'
 import Layout from 'components/layouts/article'
 import Section from 'components/section'
-import { IoLogoGithub } from 'react-icons/io5'
+import { IoLogoGithub, IoMailOutline } from 'react-icons/io5'
 import { SiQiita } from 'react-icons/si'
 import Image from 'next/image'
 
@@ -101,6 +101,8 @@ export default function Home() {
           <BioSection>
             <BioYear>Jan 2020 to Present</BioYear>
             Techforward株式会社
+            <br />
+            ・フロントエンドからバックエンドまで幅広く開発を担当
           </BioSection>
           <BioSection>
             <BioYear>Oct 2021 to Present</BioYear>
@@ -147,6 +149,17 @@ export default function Home() {
                   leftIcon={<SiQiita />}
                 >
                   @empelt
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="mailto:tetsuya.kato1009@gmail.com" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoMailOutline />}
+                >
+                  tetsuya.kato1009@gmail.com
                 </Button>
               </Link>
             </ListItem>

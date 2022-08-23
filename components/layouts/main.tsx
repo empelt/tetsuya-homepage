@@ -4,6 +4,13 @@ import { ReactNode } from 'react'
 import { Router } from 'next/router'
 import Navbar from 'components/navbar'
 import Footer from 'components/footer'
+import dynamic from 'next/dynamic'
+import Loader from '../loader'
+
+const Model = dynamic(() => import('components/model'), {
+  ssr: false,
+  loading: () => <Loader />
+})
 
 interface Props {
   children: ReactNode
@@ -23,6 +30,7 @@ export default function Main({ children, router }: Props) {
       <Navbar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
+        <Model />
         {children}
 
         <Footer />
