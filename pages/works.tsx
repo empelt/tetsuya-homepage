@@ -19,7 +19,7 @@ export default function Works() {
               thumbnail={thumbHomepage}
               url={'https://github.com/empelt/tetsuya-homepage'}
             >
-              My portfolio website
+              My portfolio website using Next.js, Typescript, Chakra UI, Framer Motion, Three.js
             </WorkGridItem>
           </Section>
         </SimpleGrid>
